@@ -7,9 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{0E5160
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{E26FB484-8D81-4DD1-A101-14BD4F757DE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhysicsFormulas", "Source\PhysicsFormulas\PhysicsFormulas.csproj", "{4AA709FA-F2B3-492C-899B-4F49CE097594}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhysicsFormulas", "Source\PhysicsFormulas\PhysicsFormulas.csproj", "{4AA709FA-F2B3-492C-899B-4F49CE097594}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhysicsFormulasUnitTests", "Test\PhysicsFormulasUnitTests\PhysicsFormulasUnitTests.csproj", "{808D71D1-513A-4BC9-8AB0-EF639ED36CF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhysicsFormulasUnitTests", "Test\PhysicsFormulasUnitTests\PhysicsFormulasUnitTests.csproj", "{808D71D1-513A-4BC9-8AB0-EF639ED36CF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhysicsFormulasBenchmark", "Test\PhysicsFormulasBenchmark\PhysicsFormulasBenchmark.csproj", "{AA91D631-E5F2-487D-9BA6-ABC7C63E2B5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{808D71D1-513A-4BC9-8AB0-EF639ED36CF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{808D71D1-513A-4BC9-8AB0-EF639ED36CF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{808D71D1-513A-4BC9-8AB0-EF639ED36CF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA91D631-E5F2-487D-9BA6-ABC7C63E2B5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA91D631-E5F2-487D-9BA6-ABC7C63E2B5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA91D631-E5F2-487D-9BA6-ABC7C63E2B5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA91D631-E5F2-487D-9BA6-ABC7C63E2B5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4AA709FA-F2B3-492C-899B-4F49CE097594} = {0E516075-8D8C-4352-B044-966D43D3D7AB}
 		{808D71D1-513A-4BC9-8AB0-EF639ED36CF4} = {E26FB484-8D81-4DD1-A101-14BD4F757DE5}
+		{AA91D631-E5F2-487D-9BA6-ABC7C63E2B5C} = {E26FB484-8D81-4DD1-A101-14BD4F757DE5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC77344C-746D-444F-9112-D1449B75F6BA}
