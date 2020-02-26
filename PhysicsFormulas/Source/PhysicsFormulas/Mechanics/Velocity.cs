@@ -2,7 +2,7 @@
 
 namespace PhysicsFormulas.Mechanics
 {
-    public class Velocity
+    public static class Velocity
     {
         public static double UniformAcceleration(double s, double t, double a = 0)
         {

@@ -9,6 +9,7 @@ namespace PhysicsFormulasBenchmark
         {
             BenchmarkRunner.Run<DisplacementBenchmarks>();
             BenchmarkRunner.Run<VelocityBenchmarks>();
+            BenchmarkRunner.Run<AccelerationBenchmarks>();
         }
     }
 }
