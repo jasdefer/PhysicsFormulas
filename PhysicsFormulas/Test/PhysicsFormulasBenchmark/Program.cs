@@ -8,6 +8,7 @@ namespace PhysicsFormulasBenchmark
         static void Main(string[] args)
         {
             BenchmarkRunner.Run<DisplacementBenchmarks>();
+            BenchmarkRunner.Run<VelocityBenchmarks>();
         }
     }
 }
