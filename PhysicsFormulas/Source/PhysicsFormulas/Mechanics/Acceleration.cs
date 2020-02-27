@@ -8,7 +8,7 @@ namespace PhysicsFormulas.Mechanics
         {
             if (t == 0)
             {
-                throw new DivideByZeroException("time");
+                throw new DivideByZeroException();
             }
             var a = 2 * (s - t * v) / (t * t);
             return a;
