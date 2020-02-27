@@ -5,8 +5,7 @@ namespace PhysicsFormulasBenchmark.MechanicsBenchmarks
 {
     public class VelocityBenchmarks
     {
-        [Params(10, -10)]
-        public double T { get; set; }
+        public const double T = 10;
         public const double A = 1;
         public const double S = 10;
 

@@ -8,7 +8,7 @@ namespace PhysicsFormulas.Mechanics
         {
             if (t == 0)
             {
-                throw new DivideByZeroException("time");
+                throw new DivideByZeroException();
             }
             return s / t - a * t / 2;
         }
@@ -17,7 +17,7 @@ namespace PhysicsFormulas.Mechanics
         {
             if (t == 0)
             {
-                throw new DivideByZeroException("time");
+                throw new DivideByZeroException();
             }
             return s / t;
         }
