@@ -5,7 +5,7 @@ namespace PhysicsFormulas.Mechanics
     public static class Duration
     {
         /// <summary>
-        /// Calculate all possible times, after which an object moved <paramref name="s"/> meters when starting with a velocity of <paramref name="v0"/> and constantly accelerating with <paramref name="a"/> m/s².
+        /// Calculates all possible duration values to move the distance <paramref name="s"/> starting with the velocity <paramref name="v0"/> and accelerating uniformly with <paramref name="a"/>.
         /// </summary>
         /// <param name="v0">The velocity of the object at t=0.</param>
         /// <param name="s">The displacement.</param>
@@ -29,7 +29,7 @@ namespace PhysicsFormulas.Mechanics
         }
 
         /// <summary>
-        /// Calculates the time needed to move a distance of <paramref name="s"/> with a velocity of <paramref name="v"/>.
+        /// Calculates the time to move the distance <paramref name="s"/> with the velocity <paramref name="v"/>.
         /// </summary>
         /// <param name="v">The velocity.</param>
         /// <param name="s">The displacement.</param>
@@ -42,7 +42,7 @@ namespace PhysicsFormulas.Mechanics
                 {
                     return 0;
                 }
-                throw new DivideByZeroException("velocity");
+                throw new DivideByZeroException();
             }
             var t = s / v;
             return t;
