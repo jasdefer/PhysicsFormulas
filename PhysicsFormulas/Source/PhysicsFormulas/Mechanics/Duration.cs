@@ -4,22 +4,36 @@ namespace PhysicsFormulas.Mechanics
 {
     public static class Duration
     {
-        public static (double t1, double t2)UniformAcceleration(double v, double s, double a = 0)
+        /// <summary>
+        /// Calculate all possible times, after which an object moved <paramref name="s"/> meters when starting with a velocity of <paramref name="v0"/> and constantly accelerating with <paramref name="a"/> m/s².
+        /// </summary>
+        /// <param name="v0">The velocity of the object at t=0.</param>
+        /// <param name="s">The displacement.</param>
+        /// <param name="a">The constant acceleration.</param>
+        /// <returns>The given distance is reached at two times. Both times are returned. Both times can be equal, if a=0.</returns>
+        public static (double t1, double t2)UniformAcceleration(double v0, double s, double a = 0)
         {
             if (a == 0)
             {
-                return (SteadyMovement(v, s), SteadyMovement(v, s));
+                var t = SteadyMovement(v0, s);
+                return (t, t);
             }
-            var sqrt = 2 * a * s + v * v;
+            var sqrt = 2 * a * s + v0 * v0;
             if (sqrt < 0)
             {
-                throw new Exception($"There is no solution for v={v}, s={s} and a={a}.");
+                throw new Exception($"There is no solution for v={v0}, s={s} and a={a}.");
             }
-            var t1 = (-Math.Sqrt(sqrt) - v) / a;
-            var t2 = (Math.Sqrt(sqrt) - v) / a;
-            return (t1,t2);
+            var t1 = (-Math.Sqrt(sqrt) - v0) / a;
+            var t2 = (Math.Sqrt(sqrt) - v0) / a;
+            return (t1, t2);
         }
 
+        /// <summary>
+        /// Calculates the time needed to move a distance of <paramref name="s"/> with a velocity of <paramref name="v"/>.
+        /// </summary>
+        /// <param name="v">The velocity.</param>
+        /// <param name="s">The displacement.</param>
+        /// <returns>Returns the time in seconds.</returns>
         public static double SteadyMovement(double v , double s)
         {
             if (v == 0)
@@ -31,7 +45,31 @@ namespace PhysicsFormulas.Mechanics
                 throw new DivideByZeroException("velocity");
             }
             var t = s / v;
-            return s/v;
+            return t;
+        }
+
+        /// <summary>
+        /// When using the method <seealso cref="UniformAcceleration(double, double, double)"/> two values for the time are returned.
+        /// This method returns the smallest positive value.
+        /// </summary>
+        /// <param name="t1">The first value.</param>
+        /// <param name="t2">The second value.</param>
+        /// <returns>Returns the smallest positive value.</returns>
+        public static double GetSmallestPositiveTime(double t1, double t2)
+        {
+            if(t1 < 0)
+            {
+                if (t2 < 0)
+                {
+                    throw new Exception();
+                }
+                return t2;
+            }
+            if (t2 < 0)
+            {
+                return t1;
+            }
+            return t1 < t2 ? t1 : t2;
         }
     }
 }
