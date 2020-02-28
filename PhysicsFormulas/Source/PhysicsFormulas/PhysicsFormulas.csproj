@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <Authors>Justus Bonz</Authors>
+    <Description>A collection of physics formulas.</Description>
+    <Version>0.0.1</Version>
+    <NeutralLanguage>English</NeutralLanguage>
+    <PackageProjectUrl>https://github.com/jasdefer/PhysicsFormulas</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
