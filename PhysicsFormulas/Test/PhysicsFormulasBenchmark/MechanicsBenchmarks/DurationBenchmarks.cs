@@ -3,24 +3,24 @@ using PhysicsFormulas.Mechanics;
 
 namespace PhysicsFormulasBenchmark.MechanicsBenchmarks
 {
-    public class DisplacementBenchmarks
+    public class DurationBenchmarks
     {
-        public double T = 10;
+        public const double S = 10;
         public const double A = 1;
-        public const double V0 = 1;
+        public const double V = 3;
 
         [Benchmark]
         public double UniformAcceleration()
         {
-            var s = Displacement.UniformAcceleration(V0, T, A);
-            return s;
+            var t = Duration.UniformAcceleration(V, S, A);
+            return t.t1;
         }
 
         [Benchmark]
-        public double SteadyMotion()
+        public double SteadyMovement()
         {
-            var s = Displacement.SteadyMotion(V0, T);
-            return s;
+            var t = Duration.SteadyMovement(V, S);
+            return t;
         }
     }
 }
