@@ -1,0 +1,29 @@
+name: Publish Package to Nuget
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.200
+    - name: Build the solution
+      run:
+        dotnet build PhysicsFormulas/ --configuration Release
+    - name: Run unit tests
+      run:
+        dotnet test PhysicsFormulas/Test/PhysicsFormulasUnitTests/PhysicsFormulasUnitTests.csproj
+    - name: Create the Nuget package
+      run:
+        dotnet pack PhysicsFormulas/Source/PhysicsFormulas/ --configuration Release -o out
+    - name: Publish the Nuget package
+      run:
+        dotnet nuget push out/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
