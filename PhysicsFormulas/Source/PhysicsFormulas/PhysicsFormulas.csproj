@@ -9,6 +9,7 @@
     <PackageProjectUrl>https://github.com/jasdefer/PhysicsFormulas</PackageProjectUrl>
     <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
     <PackageTags>dotnet-core;dotnetcore;physics;formulas;physics-formulas;velocity;acceleration;displacement;force;power;work;resistance</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
