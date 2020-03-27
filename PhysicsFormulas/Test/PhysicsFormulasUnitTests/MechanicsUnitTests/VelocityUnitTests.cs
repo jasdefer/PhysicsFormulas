@@ -52,5 +52,12 @@ namespace PhysicsFormulasUnitTests.MechanicsUnitTests
             Assert.ThrowsException<DivideByZeroException>(() => Velocity.SteadyMotion(1, 0));
             Assert.ThrowsException<DivideByZeroException>(() => Velocity.UniformAcceleration(2, 0, 1));
         }
+
+        [TestMethod]
+        public void Accelerate()
+        {
+            var v = Velocity.Accelerate(3, 7);
+            Assert.AreEqual(21, v);
+        }
     }
 }

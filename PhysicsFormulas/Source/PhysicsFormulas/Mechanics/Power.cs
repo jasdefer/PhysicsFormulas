@@ -1,5 +1,8 @@
 ﻿namespace PhysicsFormulas.Mechanics
 {
+    /// <summary>
+    /// This static class contains multiple methods to calculate the power.
+    /// </summary>
     public static class Power
     {
         /// <summary>

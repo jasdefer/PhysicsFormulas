@@ -2,6 +2,9 @@
 
 namespace PhysicsFormulas.Mechanics
 {
+    /// <summary>
+    /// This static class contains multiple methods to calculate the acceleration.
+    /// </summary>
     public static class Acceleration
     {
         /// <summary>

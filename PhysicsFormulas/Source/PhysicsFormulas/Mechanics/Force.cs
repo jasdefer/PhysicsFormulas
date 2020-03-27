@@ -2,6 +2,9 @@
 
 namespace PhysicsFormulas.Mechanics
 {
+    /// <summary>
+    /// This static class contains multiple methods to calculate the force.
+    /// </summary>
     public static class Force
     {
         /// <summary>
