@@ -1,5 +1,8 @@
 ﻿namespace PhysicsFormulas.Mechanics
 {
+    /// <summary>
+    /// This static class contains multiple methods to calculate the displacement, which is the travelled distance.
+    /// </summary>
     public static class Displacement
     {
         /// <summary>

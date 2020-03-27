@@ -2,6 +2,9 @@
 
 namespace PhysicsFormulas.Mechanics
 {
+    /// <summary>
+    /// This static class contains multiple methods to calculate the velocity.
+    /// </summary>
     public static class Velocity
     {
         /// <summary>
@@ -26,7 +29,6 @@ namespace PhysicsFormulas.Mechanics
         /// </summary>
         /// <param name="s">The displacement.</param>
         /// <param name="t">The duration.</param>
-        /// <param name="a">The acceleration.</param>
         /// <returns>Returns the velocity value.</returns>
         public static double SteadyMotion(double s, double t)
         {
