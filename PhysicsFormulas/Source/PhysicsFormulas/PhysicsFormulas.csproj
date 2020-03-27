@@ -1,13 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Authors>Justus Bonz</Authors>
     <Description>A collection of physics formulas.</Description>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <NeutralLanguage>English</NeutralLanguage>
     <PackageProjectUrl>https://github.com/jasdefer/PhysicsFormulas</PackageProjectUrl>
-    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <PackageReleaseNotes>v0.1.1
+- Added the XML-Documentation to the library
+- Added class summaries to describe the contents of each class
+- Added a method to compute the velocity when accelerating over a given time</PackageReleaseNotes>
     <PackageTags>dotnet-core;dotnetcore;physics;formulas;physics-formulas;velocity;acceleration;displacement;force;power;work;resistance</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
