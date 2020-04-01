@@ -14,7 +14,7 @@ namespace PhysicsFormulas.Mechanics
         /// <param name="t">The duration.</param>
         /// <param name="v0">The velocity.</param>
         /// <returns>Returns the acceleration value.</returns>
-        public static double UniformAcceleration(double s, double t, double v0 = 0)
+        public static double FromDisplacementOverTime(double s, double t, double v0 = 0)
         {
             if (t == 0)
             {
@@ -22,6 +22,21 @@ namespace PhysicsFormulas.Mechanics
             }
             var a = 2 * (s - t * v0) / (t * t);
             return a;
+        }
+
+        /// <summary>
+        /// Calculate the uniform acceleration to change the velocity by <paramref name="dV"/> in a timespan of <paramref name="dT"/>.
+        /// </summary>
+        /// <param name="dV">The change in velocity in m/s.</param>
+        /// <param name="dT">The duration in seconds.</param>
+        /// <returns>Returns the acceleration in m/s².</returns>
+        public static double FromVelocityChange(double dV, double dT)
+        {
+            if (dT == 0)
+            {
+                throw new DivideByZeroException();
+            }
+            return dV / dT;
         }
     }
 }
