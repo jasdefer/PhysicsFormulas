@@ -4,10 +4,12 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <Authors>Justus Bonz</Authors>
     <Description>A collection of physics formulas.</Description>
-    <Version>0.1.1</Version>
+    <Version>0.1.2</Version>
     <NeutralLanguage>English</NeutralLanguage>
     <PackageProjectUrl>https://github.com/jasdefer/PhysicsFormulas</PackageProjectUrl>
-    <PackageReleaseNotes>v0.1.1
+    <PackageReleaseNotes>v0.1.2
+- Added a formular to calculate the acceleration based on the change of velocity over time
+v0.1.1
 - Added the XML-Documentation to the library
 - Added class summaries to describe the contents of each class
 - Added a method to compute the velocity when accelerating over a given time</PackageReleaseNotes>
