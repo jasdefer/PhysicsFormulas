@@ -11,9 +11,9 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <summary>
         /// Find F in F = Fg * sin(alpha)
         /// </summary>
-        /// <param name="fg">Weight force</param>
-        /// <param name="alpha">The angle of the slope measured in radians.</param>
-        /// <returns>Returns the downhill force.</returns>
+        /// <param name="fg">Weight force [N=kg*m/s²]</param>
+        /// <param name="alpha">The angle of the slope [radians].</param>
+        /// <returns>Returns the downhill force [N=kg*m/s²].</returns>
         public static double GetDownhillForce(double fg, double alpha)
         {
             throw new NotImplementedException();
@@ -22,9 +22,9 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <summary>
         /// Find Fg in F = Fg * sin(alpha)
         /// </summary>
-        /// <param name="f">Downhill force</param>
-        /// <param name="alpha">The angle of the slope measured in radians.</param>
-        /// <returns>Returns the weight force.</returns>
+        /// <param name="f">Downhill force [N=kg*m/s²]</param>
+        /// <param name="alpha">The angle of the slope [radians].</param>
+        /// <returns>Returns the weight force [N=kg*m/s²].</returns>
         public static double GetWeightForce(double f, double alpha)
         {
             throw new NotImplementedException();
@@ -33,8 +33,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <summary>
         /// Find alpha in F = Fg * sin(alpha)
         /// </summary>
-        /// <param name="f">Downhill force</param>
-        /// <param name="fg">Weight force</param>
+        /// <param name="f">Downhill force[N=kg*m/s²]</param>
+        /// <param name="fg">Weight force [N=kg*m/s²]</param>
         /// <returns>Returns the angle of the slope [radians].</returns>
         public static double GetAlpha(double f, double fg)
         {

@@ -11,10 +11,10 @@ namespace PhysicsFormulas.Mechanics.Force
         /// Find F in F = (e * massOftheVehicle + massOfTheVehicleLoad) * a
         /// </summary>
         /// <param name="e">A mass factor describing the inertia torque of the accelerating parts of the vehicle.</param>
-        /// <param name="massVehicle">The mass of the vehicle which performs the acceleration.</param>
-        /// <param name="massLoad">The mass of the load, which the vehicle pulls while accelerating.</param>
-        /// <param name="a">The acceleration.</param>
-        /// <returns>Returns the force.</returns>
+        /// <param name="massVehicle">The mass of the vehicle which performs the acceleration [kg].</param>
+        /// <param name="massLoad">The mass of the load, which the vehicle pulls while accelerating [kg].</param>
+        /// <param name="a">The acceleration [m/s²].</param>
+        /// <returns>Returns the force [N=kg*m/s²].</returns>
         public static double GetForce(double e, double massVehicle, double massLoad, double a)
         {
             throw new NotImplementedException();
@@ -23,10 +23,10 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <summary>
         /// Find F in F = (e * massOftheVehicle + massOfTheVehicleLoad) * a
         /// </summary>
-        /// <param name="f">Force</param>
-        /// <param name="massVehicle">The mass of the vehicle which performs the acceleration.</param>
-        /// <param name="massLoad">The mass of the load, which the vehicle pulls while accelerating.</param>
-        /// <param name="a">The acceleration.</param>
+        /// <param name="f">Force [N=kg*m/s²]</param>
+        /// <param name="massVehicle">The mass of the vehicle which performs the acceleration [kg].</param>
+        /// <param name="massLoad">The mass of the load, which the vehicle pulls while accelerating [kg].</param>
+        /// <param name="a">The acceleration [m/s²].</param>
         /// <returns>Returns the mass factor describing the inertia torque of the accelerating parts of the vehicle.</returns>
         public static double GetMassFactor(double f, double massVehicle, double massLoad, double a)
         {
@@ -36,10 +36,10 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <summary>
         /// Find massOftheVehicle in F = (e * massOftheVehicle + massOfTheVehicleLoad) * a
         /// </summary>
-        /// <param name="f">Force</param>
+        /// <param name="f">Force [N=kg*m/s²]</param>
         /// <param name="e">A mass factor describing the inertia torque of the accelerating parts of the vehicle.</param>
-        /// <param name="massLoad">The mass of the load, which the vehicle pulls while accelerating.</param>
-        /// <param name="a">The acceleration.</param>
+        /// <param name="massLoad">The mass of the load, which the vehicle pulls while accelerating [kg].</param>
+        /// <param name="a">The acceleration [m/s²].</param>
         /// <returns>Returns the mass of the vehicle.</returns>
         public static double GetVehicleMass(double f, double e, double massLoad, double a)
         {
@@ -49,10 +49,10 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <summary>
         /// Find massOfTheVehicleLoad in F = (e * massOftheVehicle + massOfTheVehicleLoad) * a
         /// </summary>
-        /// <param name="f">Force</param>
+        /// <param name="f">Force [N=kg*m/s²]</param>
         /// <param name="e">A mass factor describing the inertia torque of the accelerating parts of the vehicle.</param>
-        /// <param name="massVehicle">The mass of the vehicle which performs the acceleration.</param>
-        /// <param name="a">The acceleration.</param>
+        /// <param name="massVehicle">The mass of the vehicle which performs the acceleration [kg].</param>
+        /// <param name="a">The acceleration [m/s²].</param>
         /// <returns>Returns the mass of the vehicle load.</returns>
         public static double GetVehicleLoad(double f, double e, double massVehicle, double a)
         {
@@ -62,11 +62,11 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <summary>
         /// Find a in F = (e * massOftheVehicle + massOfTheVehicleLoad) * a
         /// </summary>
-        /// <param name="f">Force</param>
+        /// <param name="f">Force [N=kg*m/s²]</param>
         /// <param name="e">A mass factor describing the inertia torque of the accelerating parts of the vehicle.</param>
-        /// <param name="massVehicle">The mass of the vehicle which performs the acceleration.</param>
-        /// <param name="massLoad">The mass of the load, which the vehicle pulls while accelerating.</param>
-        /// <returns>Returns the acceleration.</returns>
+        /// <param name="massVehicle">The mass of the vehicle which performs the acceleration [kg].</param>
+        /// <param name="massLoad">The mass of the load, which the vehicle pulls while accelerating [kg].</param>
+        /// <returns>Returns the acceleration [m/s²].</returns>
         public static double GetAcceleration(double f, double e, double massVehicle, double massLoad)
         {
             throw new NotImplementedException();

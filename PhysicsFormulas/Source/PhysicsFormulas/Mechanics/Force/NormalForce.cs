@@ -10,9 +10,9 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <summary>
         /// Find Fn in Fn = Fg * cos(alpha)
         /// </summary>
-        /// <param name="fg">The weight force [N]</param>
+        /// <param name="fg">The weight force [N=kg*m/s²]</param>
         /// <param name="alpha">The angle of the slope [radians].</param>
-        /// <returns>Returns the normal force [N].</returns>
+        /// <returns>Returns the normal force [N=kg*m/s²].</returns>
         public static double GetNormalForce(double fg, double alpha)
         {
             throw new NotImplementedException();
@@ -21,9 +21,9 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <summary>
         /// Find Fg in Fn = Fg * cos(alpha)
         /// </summary>
-        /// <param name="fn">The normal force [N]</param>
+        /// <param name="fn">The normal force [N=kg*m/s²]</param>
         /// <param name="alpha">The angle of the slope [radians].</param>
-        /// <returns>Returns the weight force [N].</returns>
+        /// <returns>Returns the weight force [N=kg*m/s²].</returns>
         public static double GetWeightForce(double fn, double alpha)
         {
             throw new NotImplementedException();
@@ -32,8 +32,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <summary>
         /// Find alpha in Fn = Fg * cos(alpha)
         /// </summary>
-        /// <param name="fn">The normal force [N]</param>
-        /// <param name="fg">The weight force [N]</param>
+        /// <param name="fn">The normal force [N=kg*m/s²]</param>
+        /// <param name="fg">The weight force [N=kg*m/s²]</param>
         /// <returns>Returns the angle of the slope [radians].</returns>
         public static double GetAlpha(double fn, double fg)
         {
