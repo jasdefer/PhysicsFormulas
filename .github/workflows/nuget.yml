@@ -20,7 +20,6 @@ jobs:
           dotnet build --configuration Release PhysicsFormulas/Source/PhysicsFormulas/PhysicsFormulas.csproj
       - name: Test the project
         run: dotnet test PhysicsFormulas/Test/PhysicsFormulasUnitTests/PhysicsFormulasUnitTests.csproj
-        run: dotnet test PhysicsFormulas/Source/PhysicsFormulas/PhysicsFormulas.csproj
       - name: publish to nuget
         env: 
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
