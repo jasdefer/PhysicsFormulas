@@ -45,9 +45,9 @@ namespace PhysicsFormulasUnitTests.Mechanics
             var f = 5;
             var fg = 10;
             var alpha = Math.PI / 6;
-            Assert.AreEqual(f, DownhillForce.GetDownhillForce(fg, alpha));
-            Assert.AreEqual(fg, DownhillForce.GetWeightForce(f, alpha));
-            Assert.AreEqual(alpha, DownhillForce.GetAlpha(f, fg));
+            Assert.AreEqual(f, DownhillForce.GetDownhillForce(fg, alpha), 1e-14);
+            Assert.AreEqual(fg, DownhillForce.GetWeightForce(f, alpha), 1e-14);
+            Assert.AreEqual(alpha, DownhillForce.GetAlpha(f, fg), 1e-14);
         }
 
         [TestMethod]
@@ -56,9 +56,9 @@ namespace PhysicsFormulasUnitTests.Mechanics
             var fn = 5;
             var fg = 10;
             var alpha = Math.PI / 3;
-            Assert.AreEqual(fn, NormalForce.GetNormalForce(fg, alpha));
-            Assert.AreEqual(fg, NormalForce.GetWeightForce(fn, alpha));
-            Assert.AreEqual(alpha, NormalForce.GetAlpha(fn, fg));
+            Assert.AreEqual(fn, NormalForce.GetNormalForce(fg, alpha), 1e-14);
+            Assert.AreEqual(fg, NormalForce.GetWeightForce(fn, alpha), 1e-14);
+            Assert.AreEqual(alpha, NormalForce.GetAlpha(fn, fg), 1e-14);
         }
 
         [TestMethod]
@@ -66,7 +66,7 @@ namespace PhysicsFormulasUnitTests.Mechanics
         {
             var fr = 6;
             var fn = 2;
-            var c = 53;
+            var c = 3;
             Assert.AreEqual(fn, RollingResistance.GetNormalForce(fr, c));
             Assert.AreEqual(fr, RollingResistance.GetRollingResistance(c, fn));
             Assert.AreEqual(c, RollingResistance.GetRollingResistanceCoefficient(fr, fn));

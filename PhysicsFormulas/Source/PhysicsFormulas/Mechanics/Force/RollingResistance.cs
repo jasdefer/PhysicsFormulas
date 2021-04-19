@@ -15,7 +15,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the rolling resistance [N=kg*m/s²].</returns>
         public static double GetRollingResistance(double c, double fn)
         {
-            throw new NotImplementedException();
+            var fr = c * fn;
+            return fr;
         }
 
         /// <summary>
@@ -26,7 +27,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the rolling resistance coefficient, which defaults to 0.02 for a car on asphalt.</returns>
         public static double GetRollingResistanceCoefficient(double fr, double fn)
         {
-            throw new NotImplementedException();
+            var c = fr / fn;
+            return c;
         }
 
         /// <summary>
@@ -37,7 +39,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the normal force [N=kg*m/s²].</returns>
         public static double GetNormalForce(double fr, double c)
         {
-            throw new NotImplementedException();
+            var fn = fr / c;
+            return fn;
         }
     }
 }

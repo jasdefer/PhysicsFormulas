@@ -15,7 +15,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the normal force [N=kg*m/s²].</returns>
         public static double GetNormalForce(double fg, double alpha)
         {
-            throw new NotImplementedException();
+            var fn = fg * Math.Cos(alpha);
+            return fn;
         }
 
         /// <summary>
@@ -26,7 +27,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the weight force [N=kg*m/s²].</returns>
         public static double GetWeightForce(double fn, double alpha)
         {
-            throw new NotImplementedException();
+            var fg = fn / Math.Cos(alpha);
+            return fg;
         }
 
         /// <summary>
@@ -37,7 +39,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the angle of the slope [radians].</returns>
         public static double GetAlpha(double fn, double fg)
         {
-            throw new NotImplementedException();
+            var alpha = Math.Acos(fn/fg);
+            return alpha;
         }
     }
 }

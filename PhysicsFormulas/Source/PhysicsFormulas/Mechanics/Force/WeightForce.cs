@@ -5,7 +5,7 @@ namespace PhysicsFormulas.Mechanics.Force
     /// <summary>
     /// Fg = m * g
     /// </summary>
-    public class WeightForce
+    public static class WeightForce
     {
         /// <summary>
         /// Find Fg in Fg = m * g
@@ -13,9 +13,10 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <param name="m">The mass [kg].</param>
         /// <param name="g">Gravitational acceleration: 9.81 m/s² on planet earth [m/s²].</param>
         /// <returns>Returns the weight force [N=kg*m/s²].</returns>
-        public static double GetForce( double m, double g)
+        public static double GetForce(double m, double g)
         {
-            throw new NotImplementedException();
+            var fg = m * g;
+            return fg;
         }
 
         /// <summary>
@@ -26,7 +27,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the mass [kg].</returns>
         public static double GetMass(double fg, double g)
         {
-            throw new NotImplementedException();
+            var m = fg / g;
+            return m;
         }
 
         /// <summary>
@@ -37,7 +39,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the gravitational acceleration.</returns>
         public static double GetGravitationalAcceleration(double fg, double m)
         {
-            throw new NotImplementedException();
+            var g = fg / m;
+            return g;
         }
     }
 }

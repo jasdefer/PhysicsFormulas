@@ -15,7 +15,7 @@ namespace PhysicsFormulas.Mechanics.Energy
         /// <returns>Returns the power [W=kg*m/s³].</returns>
         public static double GetPower(double dw, double dt)
         {
-            throw new NotImplementedException();
+            return dw / dt;
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace PhysicsFormulas.Mechanics.Energy
         /// <returns>Returns the Work [J=kg*m²/s²].</returns>
         public static double GetDeltaWork(double p, double dt)
         {
-            throw new NotImplementedException();
+            return p * dt;
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace PhysicsFormulas.Mechanics.Energy
         /// <returns>Returns the duration [s].</returns>
         public static double GetDeltaTime(double p, double dw)
         {
-            throw new NotImplementedException();
+            return dw / p;
         }
     }
 }

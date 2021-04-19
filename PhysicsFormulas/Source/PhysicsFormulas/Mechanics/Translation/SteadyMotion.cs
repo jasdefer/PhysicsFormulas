@@ -5,7 +5,7 @@ namespace PhysicsFormulas.Mechanics.Translation
     /// <summary>
     /// s = v * t
     /// </summary>
-    public class SteadyMotion
+    public static class SteadyMotion
     {
         /// <summary>
         /// Find s in s = v * t
@@ -15,7 +15,8 @@ namespace PhysicsFormulas.Mechanics.Translation
         /// <returns>Returns the distance [m].</returns>
         public static double GetDistance(double v, double t)
         {
-            throw new NotImplementedException();
+            var s = v * t;
+            return s;
         }
 
         /// <summary>
@@ -26,7 +27,8 @@ namespace PhysicsFormulas.Mechanics.Translation
         /// <returns>Returns the velocity [m/s²].</returns>
         public static double GetVelocity(double s, double t)
         {
-            throw new NotImplementedException();
+            var v = s / t;
+            return v;
         }
 
         /// <summary>
@@ -37,7 +39,8 @@ namespace PhysicsFormulas.Mechanics.Translation
         /// <returns>Returns the duration [s].</returns>
         public static double GetDuration(double s, double v)
         {
-            throw new NotImplementedException();
+            var t = s / v;
+            return t;
         }
     }
 }

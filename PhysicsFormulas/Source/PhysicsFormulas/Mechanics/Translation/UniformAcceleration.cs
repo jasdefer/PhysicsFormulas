@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PhysicsFormulas.Model;
+using PhysicsFormulas.Model.Exceptions;
+using System;
 
 namespace PhysicsFormulas.Mechanics.Translation
 {
@@ -6,7 +8,7 @@ namespace PhysicsFormulas.Mechanics.Translation
     /// s = 0.5*a*t² + v0*t
     /// a = dv/dt
     /// </summary>
-    public class UniformAcceleration
+    public static class UniformAcceleration
     {
         /// <summary>
         /// Find s in s = 0.5*a*t² + v0*t
@@ -17,7 +19,8 @@ namespace PhysicsFormulas.Mechanics.Translation
         /// <returns>Returns the distance [m].</returns>
         public static double GetDistance(double a, double t, double v0)
         {
-            throw new NotImplementedException();
+            var s = 0.5 * a * t * t + v0 * t;
+            return s;
         }
 
         /// <summary>
@@ -29,7 +32,8 @@ namespace PhysicsFormulas.Mechanics.Translation
         /// <returns>Returns the acceleration [m/s².</returns>
         public static double GetAcceleration(double s, double t, double v0)
         {
-            throw new NotImplementedException();
+            var a = 2 * (s - v0 * t) / (t * t);
+            return a;
         }
 
         /// <summary>
@@ -38,10 +42,19 @@ namespace PhysicsFormulas.Mechanics.Translation
         /// <param name="s">The distance [m].</param>
         /// <param name="a">The acceleration [m/s²].</param>
         /// <param name="v0">The initial velocity [m/s].</param>
+        /// <exception cref="NegativeValueException">Thrown, if the given distance will never be reached.</exception>
         /// <returns>Returns the duration [s].</returns>
-        public static (double t1, double t2) GetDuration(double s, double a, double v0)
+        public static Durations GetDuration(double s, double a, double v0)
         {
-            throw new NotImplementedException();
+            var sqrt = 2 * a * s + v0 * v0;
+            if (sqrt < 0)
+            {
+                throw new NegativeValueException($"The distance {s}m will never be reached starting with a velocity of {v0}m/s and accelerating with {a}m/s²");
+            }
+            var t1 = (-Math.Sqrt(sqrt) - v0) / a;
+            var t2 = (Math.Sqrt(sqrt) - v0) / a;
+            var durations = new Durations(t1, t2);
+            return durations;
         }
 
         /// <summary>
@@ -53,7 +66,8 @@ namespace PhysicsFormulas.Mechanics.Translation
         /// <returns>Returns the initial velocity [m/s].</returns>
         public static double GetStartVelocity(double s, double a, double t)
         {
-            throw new NotImplementedException();
+            var v0 = s / t - 0.5 * a * t;
+            return v0;
         }
 
         /// <summary>
@@ -64,7 +78,8 @@ namespace PhysicsFormulas.Mechanics.Translation
         /// <returns>Returns the acceleration [m/s²].</returns>
         public static double GetAcceleration(double dv, double dt)
         {
-            throw new NotImplementedException();
+            var a = dv / dt;
+            return a;
         }
 
         /// <summary>
@@ -75,7 +90,8 @@ namespace PhysicsFormulas.Mechanics.Translation
         /// <returns>Returns the change in velocity [m/s].</returns>
         public static double GetDeltaVelocity(double a, double dt)
         {
-            throw new NotImplementedException();
+            var dv = a * dt;
+            return dv;
         }
 
         /// <summary>
@@ -86,7 +102,8 @@ namespace PhysicsFormulas.Mechanics.Translation
         /// <returns>Returns the duration [s].</returns>
         public static double GetDeltaDuration(double a, double dv)
         {
-            throw new NotImplementedException();
+            var dt = dv / a;
+            return dt;
         }
     }
 }

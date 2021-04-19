@@ -17,11 +17,12 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the force [N=kg*m/s²].</returns>
         public static double GetForce(double e, double massVehicle, double massLoad, double a)
         {
-            throw new NotImplementedException();
+            var f = (e * massVehicle + massLoad) * a;
+            return f;
         }
 
         /// <summary>
-        /// Find F in F = (e * massOftheVehicle + massOfTheVehicleLoad) * a
+        /// Find e in F = (e * massOftheVehicle + massOfTheVehicleLoad) * a
         /// </summary>
         /// <param name="f">Force [N=kg*m/s²]</param>
         /// <param name="massVehicle">The mass of the vehicle which performs the acceleration [kg].</param>
@@ -30,7 +31,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the mass factor describing the inertia torque of the accelerating parts of the vehicle.</returns>
         public static double GetMassFactor(double f, double massVehicle, double massLoad, double a)
         {
-            throw new NotImplementedException();
+            var e = f / (a * massVehicle) - massLoad / massVehicle;
+            return e;
         }
 
         /// <summary>
@@ -43,7 +45,9 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the mass of the vehicle.</returns>
         public static double GetVehicleMass(double f, double e, double massLoad, double a)
         {
-            throw new NotImplementedException();
+            var massVehicle = f / (e * a) - massLoad / e;
+            return massVehicle;
+                
         }
 
         /// <summary>
@@ -56,7 +60,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the mass of the vehicle load.</returns>
         public static double GetVehicleLoad(double f, double e, double massVehicle, double a)
         {
-            throw new NotImplementedException();
+            var massLoad = f / a - e * massVehicle;
+            return massLoad;
         }
 
         /// <summary>
@@ -69,7 +74,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the acceleration [m/s²].</returns>
         public static double GetAcceleration(double f, double e, double massVehicle, double massLoad)
         {
-            throw new NotImplementedException();
+            var a = f / (e * massVehicle + massLoad);
+            return a;
         }
     }
 }

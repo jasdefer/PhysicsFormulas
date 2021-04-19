@@ -16,7 +16,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the downhill force [N=kg*m/s²].</returns>
         public static double GetDownhillForce(double fg, double alpha)
         {
-            throw new NotImplementedException();
+            var f = fg * Math.Sin(alpha);
+            return f;
         }
 
         /// <summary>
@@ -27,7 +28,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the weight force [N=kg*m/s²].</returns>
         public static double GetWeightForce(double f, double alpha)
         {
-            throw new NotImplementedException();
+            var fg = f / Math.Sin(alpha);
+            return fg;
         }
 
         /// <summary>
@@ -38,7 +40,8 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the angle of the slope [radians].</returns>
         public static double GetAlpha(double f, double fg)
         {
-            throw new NotImplementedException();
+            var alpha = Math.Asin(f / fg);
+            return alpha;
         }
     }
 }
