@@ -1,13 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <Authors>Justus Bonz</Authors>
-    <Description>A collection of physics formulas.</Description>
-    <Version>0.1.2</Version>
+    <Description>This library is a collection of some formulas known from physics.</Description>
+    <Version>0.2.0</Version>
     <NeutralLanguage>English</NeutralLanguage>
     <PackageProjectUrl>https://github.com/jasdefer/PhysicsFormulas</PackageProjectUrl>
-    <PackageReleaseNotes>v0.1.2
+    <PackageReleaseNotes>v0.2.0
+Redesigned the structure. Each formular is now represented by a static class.
+v0.1.2
 - Added a formular to calculate the acceleration based on the change of velocity over time
 v0.1.1
 - Added the XML-Documentation to the library
@@ -15,13 +17,7 @@ v0.1.1
 - Added a method to compute the velocity when accelerating over a given time</PackageReleaseNotes>
     <PackageTags>dotnet-core;dotnetcore;physics;formulas;physics-formulas;velocity;acceleration;displacement;force;power;work;resistance</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
 
 </Project>
