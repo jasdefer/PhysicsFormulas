@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PhysicsFormulas.Mechanics.Energy
+﻿namespace PhysicsFormulas.Mechanics.Energy
 {
     /// <summary>
     /// P = dW/dt

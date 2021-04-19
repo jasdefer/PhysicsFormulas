@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PhysicsFormulas.Mechanics.Force
+﻿namespace PhysicsFormulas.Mechanics.Force
 {
     /// <summary>
     /// Fr = c * Fn

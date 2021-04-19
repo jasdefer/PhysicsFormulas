@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PhysicsFormulas.Mechanics.Translation
+﻿namespace PhysicsFormulas.Mechanics.Translation
 {
     /// <summary>
     /// s = v * t
