@@ -56,5 +56,17 @@ namespace PhysicsFormulasUnitTests.Mechanics
 
             Assert.ThrowsException<NegativeValueException>(() => UniformAcceleration.GetDuration(s, a, v0));
         }
+
+        [TestMethod]
+        public void UniformAccelerationTest3()
+        {
+            var s = 3;
+            var v0 = 1;
+            var a = 0;
+
+            var durations = UniformAcceleration.GetDuration(s, a, v0);
+            Assert.AreEqual(3, durations.Duration2, 0.01);
+            Assert.AreEqual(3, durations.Duration1, 0.01);
+        }
     }
 }

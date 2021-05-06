@@ -46,6 +46,11 @@ namespace PhysicsFormulas.Mechanics.Translation
         /// <returns>Returns the duration [s].</returns>
         public static Durations GetDuration(double s, double a, double v0)
         {
+            if (a == 0)
+            {
+                var t = SteadyMotion.GetDuration(s, v0);
+                return new Durations(t, t);
+            }
             var sqrt = 2 * a * s + v0 * v0;
             if (sqrt < 0)
             {
