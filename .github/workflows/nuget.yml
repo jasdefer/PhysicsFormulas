@@ -1,29 +1,28 @@
-name: Publish Package to Nuget
-
+name: publish to nuget
 on:
   push:
     branches:
-      - master
-
+      - master # Default release branch
 jobs:
-  build:
-
+  publish:
+    name: build, pack & publish
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.200
-    - name: Build the solution
-      run:
-        dotnet build PhysicsFormulas/ --configuration Release
-    - name: Run unit tests
-      run:
-        dotnet test PhysicsFormulas/Test/PhysicsFormulasUnitTests/PhysicsFormulasUnitTests.csproj
-    - name: Create the Nuget package
-      run:
-        dotnet pack PhysicsFormulas/Source/PhysicsFormulas/ --configuration Release -o out
-    - name: Publish the Nuget package
-      run:
-        dotnet nuget push out/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+      - uses: actions/checkout@v2
+
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+      - name: Restore and Build
+        run: |
+          dotnet restore PhysicsFormulas/Source/PhysicsFormulas/PhysicsFormulas.csproj
+          dotnet build --configuration Release PhysicsFormulas/Source/PhysicsFormulas/PhysicsFormulas.csproj
+      - name: Test the project
+        run: dotnet test PhysicsFormulas/Test/PhysicsFormulasUnitTests/PhysicsFormulasUnitTests.csproj
+      - name: publish to nuget
+        env: 
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+        run: |
+          dotnet pack --configuration Release PhysicsFormulas/Source/PhysicsFormulas/PhysicsFormulas.csproj --output Nuget
+          dotnet nuget push "Nuget/**.nupkg" --source "https://api.nuget.org/v3/index.json" --api-key ${NUGET_KEY}
