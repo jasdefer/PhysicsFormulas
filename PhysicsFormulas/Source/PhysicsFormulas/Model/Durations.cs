@@ -12,8 +12,8 @@ namespace PhysicsFormulas.Model
         /// <summary>
         /// Create a new tuple of durations
         /// </summary>
-        /// <param name="duration1"></param>
-        /// <param name="duration2"></param>
+        /// <param name="duration1">The first duration variable.</param>
+        /// <param name="duration2">The second duration variable.</param>
         public Durations(double duration1,
             double duration2)
         {

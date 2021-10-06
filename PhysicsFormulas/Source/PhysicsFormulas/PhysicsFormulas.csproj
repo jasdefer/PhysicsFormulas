@@ -19,6 +19,8 @@ v0.1.1
 - Added a method to compute the velocity when accelerating over a given time</PackageReleaseNotes>
     <PackageTags>dotnet-core;dotnetcore;physics;formulas;physics-formulas;velocity;acceleration;displacement;force;power;work;resistance</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
   </PropertyGroup>
 
