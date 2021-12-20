@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Authors>Justus Bonz</Authors>
     <Description>This library is a collection of some formulas known from physics.</Description>
     <Version>0.2.2</Version>
