@@ -4,11 +4,13 @@
     <TargetFramework>net6.0</TargetFramework>
     <Authors>Justus Bonz</Authors>
     <Description>This library is a collection of some formulas known from physics.</Description>
-    <Version>0.2.2</Version>
+    <Version>0.2.3</Version>
     <Nullable>enable</Nullable>
     <NeutralLanguage>English</NeutralLanguage>
     <PackageProjectUrl>https://github.com/jasdefer/PhysicsFormulas</PackageProjectUrl>
-    <PackageReleaseNotes>v0.2.2
+    <PackageReleaseNotes>0.2.3
+- Migrated to .Net 6
+v0.2.2
 Fixed a bug in the uniform acceleration formula
 v0.2.1
 Redesigned the structure. Each formular is now represented by a static class.
