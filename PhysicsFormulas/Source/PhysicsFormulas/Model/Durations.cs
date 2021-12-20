@@ -67,9 +67,9 @@ public struct Durations : IEquatable<Durations>
     /// </summary>
     /// <param name="obj">The comparing object.</param>
     /// <returns>True if the comparing object is a Durations struct and the the first and second duration are equal respectively.</returns>
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
-        if (!(obj is Durations))
+        if (obj is not Durations)
             return false;
 
         return base.Equals((Durations)obj);

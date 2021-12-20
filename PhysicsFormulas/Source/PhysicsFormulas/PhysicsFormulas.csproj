@@ -5,6 +5,7 @@
     <Authors>Justus Bonz</Authors>
     <Description>This library is a collection of some formulas known from physics.</Description>
     <Version>0.2.2</Version>
+    <Nullable>enable</Nullable>
     <NeutralLanguage>English</NeutralLanguage>
     <PackageProjectUrl>https://github.com/jasdefer/PhysicsFormulas</PackageProjectUrl>
     <PackageReleaseNotes>v0.2.2
