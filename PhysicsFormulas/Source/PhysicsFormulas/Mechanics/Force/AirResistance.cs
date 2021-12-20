@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PhysicsFormulas.Mechanics.Force
+﻿namespace PhysicsFormulas.Mechanics.Force
 {
     /// <summary>
     /// F = cw * area * airDensity * relativeVelocity² / 2;
@@ -17,7 +15,7 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the air resistance [N=kg*m/s²].</returns>
         public static double GetForce(double cw, double area, double airDensity, double relativeVelocity)
         {
-            var f = cw * airDensity * relativeVelocity * relativeVelocity * area/ 2;
+            var f = cw * airDensity * relativeVelocity * relativeVelocity * area / 2;
             return f;
         }
 
@@ -29,7 +27,7 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <param name="airDensity">The density of the air, which defaults to 1.2 kg / m³ at 20°C at sea level [kg/m³].</param>
         /// <param name="relativeVelocity">The relative velocity of the vehicle against the wind [m/s].</param>
         /// <returns>Returns the drag coefficient of the moving object.</returns>
-        public static double GetDragCoefficient(double f,double area, double airDensity, double relativeVelocity)
+        public static double GetDragCoefficient(double f, double area, double airDensity, double relativeVelocity)
         {
             var cw = 2 * f / (area * airDensity * relativeVelocity * relativeVelocity);
             return cw;

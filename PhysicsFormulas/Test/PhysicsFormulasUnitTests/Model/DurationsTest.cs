@@ -1,8 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PhysicsFormulas.Model;
-using PhysicsFormulas.Model.Exceptions;
-
-namespace PhysicsFormulasUnitTests.Model
+﻿namespace PhysicsFormulasUnitTests.Model
 {
     [TestClass]
     public class DurationsTest
@@ -20,7 +16,7 @@ namespace PhysicsFormulasUnitTests.Model
         public void SortedConstructor()
         {
             var durations = new Durations(2, 1);
-            
+
             Assert.AreEqual(1, durations.Duration1);
             Assert.AreEqual(2, durations.Duration2);
         }

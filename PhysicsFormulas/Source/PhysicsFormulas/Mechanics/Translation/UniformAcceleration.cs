@@ -1,8 +1,4 @@
-﻿using PhysicsFormulas.Model;
-using PhysicsFormulas.Model.Exceptions;
-using System;
-
-namespace PhysicsFormulas.Mechanics.Translation
+﻿namespace PhysicsFormulas.Mechanics.Translation
 {
     /// <summary>
     /// s = 0.5*a*t² + v0*t

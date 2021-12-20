@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PhysicsFormulas.Mechanics.Energy;
+﻿using PhysicsFormulas.Mechanics.Energy;
 
 namespace PhysicsFormulasUnitTests.Mechanics
 {
@@ -25,9 +24,9 @@ namespace PhysicsFormulasUnitTests.Mechanics
             var f = 7;
             var s = 3;
 
-            Assert.AreEqual(f, MechanicalWork.GetForce(w,s));
-            Assert.AreEqual(s, MechanicalWork.GetDistance(w,f));
-            Assert.AreEqual(w, MechanicalWork.GetWork(f,s));
+            Assert.AreEqual(f, MechanicalWork.GetForce(w, s));
+            Assert.AreEqual(s, MechanicalWork.GetDistance(w, f));
+            Assert.AreEqual(w, MechanicalWork.GetWork(f, s));
         }
     }
 }

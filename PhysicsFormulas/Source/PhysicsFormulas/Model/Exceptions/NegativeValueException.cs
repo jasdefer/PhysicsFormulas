@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PhysicsFormulas.Model.Exceptions
+﻿namespace PhysicsFormulas.Model.Exceptions
 {
     /// <summary>
     /// This exception is thrown, if a positive number is expected to be in a set of one or more values, but all of them are negative.
@@ -10,7 +8,7 @@ namespace PhysicsFormulas.Model.Exceptions
         /// <summary>
         /// Create a new instance without a description.
         /// </summary>
-        public NegativeValueException() :base()
+        public NegativeValueException() : base()
         {
 
         }

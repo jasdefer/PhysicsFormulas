@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PhysicsFormulas.Mechanics.Force;
-using System;
+﻿using PhysicsFormulas.Mechanics.Force;
 
 namespace PhysicsFormulasUnitTests.Mechanics
 {

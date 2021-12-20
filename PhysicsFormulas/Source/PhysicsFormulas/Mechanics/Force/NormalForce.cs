@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PhysicsFormulas.Mechanics.Force
+﻿namespace PhysicsFormulas.Mechanics.Force
 {
     /// <summary>
     /// Fn = Fg * cos(alpha)
@@ -39,7 +37,7 @@ namespace PhysicsFormulas.Mechanics.Force
         /// <returns>Returns the angle of the slope [radians].</returns>
         public static double GetAlpha(double fn, double fg)
         {
-            var alpha = Math.Acos(fn/fg);
+            var alpha = Math.Acos(fn / fg);
             return alpha;
         }
     }

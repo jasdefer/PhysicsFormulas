@@ -45,7 +45,7 @@
         {
             var massVehicle = f / (e * a) - massLoad / e;
             return massVehicle;
-                
+
         }
 
         /// <summary>

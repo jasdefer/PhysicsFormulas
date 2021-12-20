@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PhysicsFormulas.Mechanics.Translation;
-using PhysicsFormulas.Model.Exceptions;
+﻿using PhysicsFormulas.Mechanics.Translation;
 
 namespace PhysicsFormulasUnitTests.Mechanics
 {

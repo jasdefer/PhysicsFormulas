@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PhysicsFormulas.Mechanics.Force
+﻿namespace PhysicsFormulas.Mechanics.Force
 {
     /// <summary>
     /// Calculate the force pulling on an object on a slope.

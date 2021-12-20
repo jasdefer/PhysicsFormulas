@@ -1,6 +1,4 @@
-﻿using PhysicsFormulas.Model.Exceptions;
-using System;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 
 namespace PhysicsFormulas.Model
 {
